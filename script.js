@@ -6,8 +6,10 @@ let trashVisible=true;
 let redeemVisible=false;
 let historyVisible=false;
 let hists=0;
-
 let historyData = [];
+let coins = document.querySelector(".coinsVal");
+let conval = `<div class="valcoin">100</div>`
+coins.innerHTML=conval;
 if(trashVisible==true){
     let modal = `<input type="text" id="text1"></input>
         <input type="text" id="text2"></input>
@@ -23,6 +25,11 @@ if(trashVisible==true){
             }else if(pointsVal==""){
                 alert("Weight is EMPTY!!!");
             }else{
+            let txt1 = parseInt(coins.innerText);
+            let txt2 = parseInt(pointsVal);
+            const sum = txt1+txt2;
+            coins.innerText=sum;
+            console.log(coins.innerText)
             let arr = [dataVal,pointsVal];
             historyData[hists]=arr;
             for(let i=0;i<historyData.length;i++){
@@ -54,6 +61,10 @@ trash.addEventListener("click",function(){
             }else if(pointsVal==""){
                 alert("Weight is EMPTY!!!");
             }else{
+            let txt1 = parseInt(coins.innerText);
+            let txt2 = parseInt(pointsVal);
+            const sum = txt1+txt2;
+            coins.innerText=sum;
             let arr = [dataVal,pointsVal];
             historyData[hists]=arr;
             for(let i=0;i<historyData.length;i++){
