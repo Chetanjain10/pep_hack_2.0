@@ -17,3 +17,22 @@ video {
 .intro {
   height: 20vh;
 }
+
+.task-bar {
+  margin-top: 50px;
+  display: flex;
+  height: 4vh;
+  width: 100vh;
+  align-items: center;
+  margin-left: 50px;
+}
+.task-bar-option {
+  border: 1px solid black;
+  font-weight: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-right: 10px;
+}

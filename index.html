@@ -14,12 +14,17 @@
     <div class = "video-container">
     <video autoplay controls></video>
     </div>
-    <script>
-        let video = document.querySelector("video");
-        let constraints = {video : true};
-        navigator.mediaDevices.getUserMedia(constraints).then(function (mediaStream){
-            video.srcObject=mediaStream;
-        });
+    <div class="task-container">
+        <div class=task-bar>
+            <button class="task-bar-option trash-option selected">Trash</button>
+            <button class="task-bar-option redeem-option">Redeem</button>
+            <button class="task-bar-option history-option">History</button>
+        </div>
+        <div class="modal-container"></div>
+    </div>
+    <script src="script.js">
+       
     </script>
+    
 </body>
 </html>
