@@ -5,8 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pep_hack</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Project</h1>
+    <div class="intro">
+        <h1>scrappy</h1>
+    </div>
+    <div class = "video-container">
+    <video autoplay controls></video>
+    </div>
+    <script>
+        let video = document.querySelector("video");
+        let constraints = {video : true};
+        navigator.mediaDevices.getUserMedia(constraints).then(function (mediaStream){
+            video.srcObject=mediaStream;
+        });
+    </script>
 </body>
 </html>
