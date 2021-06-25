@@ -7,6 +7,12 @@ let redeemVisible=false;
 let historyVisible=false;
 let hists=0;
 let historyData = [];
+let redeemData = [];
+let bid = 0;
+let button= `<button class="redbtn" id="${bid}">Redeem</button>`
+redeemData[0]=["myantra",100];
+redeemData[1]=["amazon",200];
+redeemData[2]=["amazon",200];
 let coins = document.querySelector(".coinsVal");
 let conval = `<div class="valcoin">100</div>`
 coins.innerHTML=conval;
@@ -83,9 +89,13 @@ trash.addEventListener("click",function(){
 
 redeem.addEventListener("click",function(){
     if(redeemVisible==false){
-        let modal = `<div class="modal">
-        <h1>hellor</h1>
-    </div>`
+        let modal = "<ul>";
+        for (let i = 0; i < redeemData.length; i++) {
+            console.log(redeemData[i][0]);
+        modal += "<li>" + redeemData[i][0] + "      " + redeemData[i][1] +button +"</li>";
+        bid++;
+        }
+        modal += "</ul>";
         MC.innerHTML=modal;
         trashVisible=false;
         redeemVisible=true;
@@ -97,7 +107,7 @@ history.addEventListener("click",function(){
          let modal = "<ul>";
         for (let i = 0; i < historyData.length; i++) {
             console.log(historyData[i][0]);
-        modal += "<li>" + historyData[i][0] + "      " + historyData[i][1] + "</li>";
+        modal += "<li>" + historyData[i][0] + "      " + historyData[i][1]+ "</li>";
         }
         modal += "</ul>";
         MC.innerHTML=modal;
@@ -106,6 +116,7 @@ history.addEventListener("click",function(){
         historyVisible=true;
     }
 });
+
 
 let video = document.querySelector("video");
 let constraints = {video : true};

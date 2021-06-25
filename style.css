@@ -1,4 +1,53 @@
+body {
+  background-color: black;
+}
+
+.intro {
+  display: flex;
+  height: 30vh;
+}
+
+.image {
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 28%;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+.dump-me {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin-left: 200px;
+  justify-content: center;
+  align-items: center;
+  color: green;
+}
+
+.user-id {
+}
+
+.id {
+  margin-top: 20px;
+  margin-left: 60px;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.user-points {
+  margin-left: 60px;
+  margin-top: 20px;
+  display: flex;
+  color: aliceblue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
+}
+.points {
+}
+
+.coinsVal {
+}
 .video-container {
+  margin-top: 90px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -6,16 +55,11 @@
   width: 50vw;
   background-color: black;
 }
-
 video {
   /* ye dekho video ko 100% height and width of its parent di gayi hai
    iska parent video container hai  */
   height: 100%;
   width: 100%;
-}
-
-.intro {
-  height: 20vh;
 }
 
 .task-bar {
